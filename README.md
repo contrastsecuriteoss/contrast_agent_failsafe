@@ -13,18 +13,18 @@ docker push yourorg/contrast_agent_failsafe:latest
 Define a secret file in your Kubernetes/ECS
 
 
-apiVersion: v1
-kind: Secret
-metadata:
-  name: contrast-loader
-type: Opaque
-stringData:
-  url: "https://app.contrastsecurity.com"
-  api_key: "<apikey>"
-  service_key: "<service key>"
-  user_name: "<>agent username>"
-  authorization: "<personal auth header>"
-  org_id: "<org id>"
+        apiVersion: v1
+        kind: Secret
+        metadata:
+          name: contrast-loader
+        type: Opaque
+        stringData:
+          url: "https://app.contrastsecurity.com"
+          api_key: "<apikey>"
+          service_key: "<service key>"
+          user_name: "<>agent username>"
+          authorization: "<personal auth header>"
+          org_id: "<org id>"
   
   
   
