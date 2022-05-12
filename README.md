@@ -67,7 +67,7 @@ Define a secret file in your Kubernetes/ECS
               key: org_id
         volumeMounts:
         - name: contrast-agent-pv-volume
-          mountPath: /mnt/contrast
+          mountPath: /tmp/contrast
       volumes:
       - name: contrast-agent-pv-volume
         emptyDir: {}
