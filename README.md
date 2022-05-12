@@ -28,7 +28,7 @@ Define a secret file in your Kubernetes/ECS
   
   
   
-  Finally add the initcontainer in your application manifest
+   add the initcontainer in your application manifest and a volume that is an empty dir
   
 
       initContainers:
@@ -71,3 +71,13 @@ Define a secret file in your Kubernetes/ECS
       volumes:
       - name: contrast-agent-pv-volume
         emptyDir: {}
+
+once the init container is added and working
+add a volume into your existing container
+
+        volumeMounts:
+        - name: contrast-agent-pv-volume
+          mountPath: "/mnt/contrast"
+          readOnly: true
+
+Finally you can add Env variable JAVA_TOOL_OPTIONS or NODE_OPTIONS to activate the agent.
