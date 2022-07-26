@@ -81,3 +81,7 @@ add a volume into your existing container
           readOnly: true
 
 Finally you can add Env variable JAVA_TOOL_OPTIONS or NODE_OPTIONS to activate the agent.
+
+env:
+- name: "JAVA_TOOL_OPTIONS"
+          value: "-javaagent:/tmp/contrast/contrast.jar -Dcontrast.config.path=/tmp/contrast/contrast_security.yaml -Dcontrast.agent.contrast_working_dir=/tmp"
